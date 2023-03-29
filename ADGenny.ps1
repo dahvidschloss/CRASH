@@ -205,7 +205,7 @@ function Assign-DirectorTitle($OU) {
 function Assign-ExecutiveTitle($user) {
     if (!$user) { return }
     if ($UserArray.ContainsKey($user)) {
-        $execTitles = @("CEO", "CFO", "COO", "CTO", "CMO", "CHRO", "CSO" "CRO", "CIO", "CISO")
+        $execTitles = @("CEO", "CFO", "COO", "CTO", "CMO", "CHRO", "CSO", "CRO", "CIO", "CISO")
         $availableTitles = $execTitles | Where-Object { $AssignedExecTitles -notcontains $_ }
         
         if ($availableTitles.Count -gt 0) {
@@ -215,6 +215,12 @@ function Assign-ExecutiveTitle($user) {
         } else {
             Write-Host "Error: All executive titles have been assigned."
         }
+    }
+}
+
+Function Create-Groups {
+    Foreach ($g in $Groups) {
+        New-ADGroup -Name $g -GroupCategory Security -GroupScope Global -Verbose
     }
 }
 
@@ -292,6 +298,8 @@ Function Create-Users {
         }
     }
 }
+
+
 
 # Create Organizational Units
 Create-OUs
