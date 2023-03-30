@@ -17,10 +17,11 @@ Features
    - Run the script in a PowerShell environment with Domain Admin privileges (just do ./adgenny.ps1)
    - Watch the script generate and populate random users in your Active Directory
 
-Version
+#Version
 
 Current version: 1.0
-Planned Improvements
+
+#Planned Improvements
 
    - Add more departments and roles to better mimic real-world organizations
    - Implement user-friendly customization of departments, roles, and user counts through either arguments or a config file
@@ -29,4 +30,4 @@ Planned Improvements
    - Add error handling for cases where the Fake Name Generator API is not accessible or rate-limited (or error handling in general, but like if it works it works)
    - Improve the script's performance by optimizing loops and string manipulation (you got a slow computer then this bad boy goes mad slow)
 
-Please feel free to contribute to this project by submitting pull requests or opening issues for any bugs or feature requests.
+##Please feel free to contribute to this project by submitting pull requests or opening issues for any bugs or feature requests.
