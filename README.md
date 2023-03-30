@@ -1,8 +1,9 @@
 # The Unintentional IT Administrator(v1.0) (aka ADGenny)
-## Author: Dahvid Schloss
-## phone number: (281) 330-8004
+Author: Dahvid Schloss
 
-## This PowerShell script generates a set of random users and populates them into Active Directory. It creates Organizational Units (OUs) and corresponding groups based on predefined department names, then assigns users to these groups. Users are given randomly generated names, passwords, and titles specific to their department.
+Phone number: (281) 330-8004 (call it I dare you)
+
+### This PowerShell script generates a set of random users and populates them into Active Directory. It creates Organizational Units (OUs) and corresponding groups based on predefined department names, then assigns users to these groups. Users are given randomly generated names, passwords, and titles specific to their department.
 Features
 
   -  Generates 100 random users with unique names and passwords
@@ -21,7 +22,7 @@ Features
 
 Current version: 1.0
 
-### Patch Notes: 
+##### Patch Notes: 
   - what can I say its 1.0
 
 # Planned Improvements
