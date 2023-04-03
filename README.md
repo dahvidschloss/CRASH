@@ -1,8 +1,12 @@
-# The Unintentional IT Administrator(v1.0) (aka ADGenny)
+# CRASH - Completely Risky Active-Directory Simulation Hub
 Author: Dahvid Schloss
 
 Phone number: (281) 330-8004 (call it I dare you)
 
+
+
+
+## The Unintentional IT Administrator(v1.0) (aka ADGenny)
 ### This PowerShell script generates a set of random users and populates them into Active Directory. It creates Organizational Units (OUs) and corresponding groups based on predefined department names, then assigns users to these groups. Users are given randomly generated names, passwords, and titles specific to their department.
 Features
 
@@ -12,20 +16,20 @@ Features
   -  Assigns a unique "Director" title to a random user in each department
   -  Creates the users in Active Directory and adds them to their respective groups
 
-## Usage
+### Usage
 
    - Install the Active Directory module for PowerShell if you haven't already
    - Run the script in a PowerShell environment with Domain Admin privileges (just do ./adgenny.ps1)
    - Watch the script generate and populate random users in your Active Directory
 
-# Version
+### Version
 
 Current version: 1.0
 
 ##### Patch Notes: 
   - what can I say its 1.0
 
-# Planned Improvements
+### Planned Improvements
 
    - Add more departments and roles to better mimic real-world organizations
    - Implement user-friendly customization of departments, roles, and user counts through either arguments or a config file
