@@ -38,4 +38,36 @@ Current version: 1.0
    - Add error handling for cases where the Fake Name Generator API is not accessible or rate-limited (or error handling in general, but like if it works it works)
    - Improve the script's performance by optimizing loops and string manipulation (you got a slow computer then this bad boy goes mad slow)
 
+
+## ADversary Builder(v1.0)
+### This PowerShell script designed to create random vulnerabilities for users within an Active Directory (AD) environment. The script generates a vulnerable_users.csv file, which can be used on workstations set up for your Range or Capture the Flag (CTF) exercises. It is intended to help security professionals assess and improve their organization's security posture.
+
+   - Sets weak passwords for randomly selected users from a wordlist
+   - Creates Kerberoastable users with weak passwords
+   - Grants LAPS access to users in a specified Organizational Unit (OU) and assigns them weak passwords
+
+### !!NOTE!! To make this work you need a wordlist, Suggest importing Rockyou.txt from your Kali Linux instance to the local CRASH folder. I can't figure out how to import files larger than 100mb and Rockyou is 110mb.
+
+### Usage
+
+   - Install the Active Directory module for PowerShell if you haven't already
+   - Import the script into the current PowerShell Instance
+   - Run Set-RandomWeakPasswordsForUsers first
+   - Follow up with  New-KerberoastableUsers and/or  Grant-LAPSAccess (if LAPS is configured)
+
+### Version
+
+Current version: 1.0
+
+##### Patch Notes: 
+  - Inital Commit
+
+### Planned Improvements
+
+   - Add more user vulnerabilites
+   - Implement user-friendly wrapper function to run functions at random
+   - Implement fucntions to create Workstaion Vulnerabilites within AD
+   - Implement functions to create LSASS entries into workstaitons from the vulnerable users csv
+
+
 ## Please feel free to contribute to this project by submitting pull requests or opening issues for any bugs or feature requests.
