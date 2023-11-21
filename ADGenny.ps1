@@ -1,12 +1,12 @@
 # Author: Dahvid Schloss
 # Email: dahvid.schloss@echeloncyber.com
-# Date: 2023-28-03
+# Date: 2023-21-11
 # Description: This script creates 100  random  users, creates OUs, and coorelating groups. 
 Import-Module ActiveDirectory
 
 # Set Variables
 $path = "https://www.fakenamegenerator.com/gen-random-us-us.php"
-$UserArray = @{}
+$global:UserArray = @{}
 $rootDomain = $env:USERDNSDOMAIN.split('.')[1]
 $subDomain = $env:USERDNSDOMAIN.split('.')[0]
 $OUs = "HR", "Finance", "Marketing", "IT", "Executives", "Programmers"
