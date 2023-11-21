@@ -1,8 +1,8 @@
 # Name: FakeFileShare (FFS.ps1)
 # Author: Dahvid Schloss
 # Email: dahvid.schloss@echeloncyber.com
-# Date: 2023-28-03
-# Description: This script creates 100  random  users, creates OUs, and coorelating groups. 
+# Date: 2023-21-11
+# Description: This PowerShell script creates a simulated corporate file share environment with randomly generated documents. 
 
 function Generate-FakeFileShare {
     param (
@@ -99,7 +99,7 @@ function Generate-FakeFileShare {
 
         $filePath = Join-Path -Path $path -ChildPath $fileName
 
-        # Generate content for the file that is somewhat beleivable and doesn't always end with the "this is a simluated document and shouldn't be real envionrment"....we know
+        # Generate content for the file that is somewhat believable and doesn't always end with the "this is a simluated document and shouldn't be real envionrment"....we know
         $contentPrompt = "Write a realistic and department-specific document content for a $fileType file in the $department department with the file name being $dynamicNamePart. This content will be simulating a real envinoment so do not include a disclaimer about it being a simulated document. Your response should only include what is relevant to the document and should not include any descriptions about it"
         if($Debug -eq $true){
             Write-Host $ContentPrompt
@@ -112,7 +112,7 @@ function Generate-FakeFileShare {
             ".docx" {
                 try {
                     $word = New-Object -ComObject Word.Application
-                    # Set to $False because we hackers and we don't want to constatly see the window we are excuting
+                    # Set to $False because we hackers and we don't want to constantly see the window we are excuting. its gotta be a secret
                     if ($Debug -eq $True){
                         $word.Visible = $True 
                     }else{
